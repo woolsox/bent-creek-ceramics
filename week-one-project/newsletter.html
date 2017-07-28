@@ -25,16 +25,56 @@
         </ul>                        
     </nav>
      
-    <!--    SITE MAIN CONTENT     -->
+    <!--    SITE  CONTENT     -->
     
-    <body>
-        <!--     TO DO: MAIN CONTENT HERE       -->
-    </body>
-         
+    <div class="sign-up-form-bg">
+        <img src="images/background-2.jpg">   
+        <div class="sign-up-form">
+            <!--     TO DO: NEWSLETTER CONTENT HERE       -->
+            <fieldset>
+                <h1>Sign Up For Our Weekly Newsletter</h1>
+                <h2>Stay up to date with events, activities, news and specials.</h2>
+                <form action="/action_page.php">
+                    <div class="form-input">
+                    <label>Name:</label>
+                        <input type="text" name="name" id="nameInput" style="width: 550px"><br>
+                        <hr>
+                        <label>E-mail:</label>
+                        <input type="email" name="email" id="emailInput" style="width: 550px"><br>
+                        <hr>
+                    </div>
+                    <div class="form-submit">   
+                        <input type="submit" value="Submit" id="signupButton">
+                    </div>
+                </form>
+            </fieldset>
+        </div> 
+    </div>
+    
+    <!--   SUBMISSION SCRIPT FOR NEWSLETTER SIGN UP     -->
+    
+    <script type="text/javascript">
+        var nameInput = document.getElementById('nameInput');
+        var emailInput = document.getElementById('emailInput');
+        var signupButton = document.getElementById('signupButton');
+        signupButton.addEventListener('click', function(e) {
+        var nameVal = nameInput.value;
+        var emailVal = emailInput.value;
+        if (nameVal && emailVal) {
+              alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+              nameInput.value = "";
+              emailInput.value = "";
+            } else {
+              alert('We would love for you to sign up, please provide both your name and email address.');
+            }
+        });
+    </script>
+           
     <!--    SITE FOOTER      -->
     
     <footer>
         <!--     TO DO: FOOTER CONTENT HERE       -->
+        <p>Copyright 2017, Bent Creek Ceramics</p>
     </footer>
 
 </html>
